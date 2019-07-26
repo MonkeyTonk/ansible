@@ -136,6 +136,8 @@ EXAMPLES = r'''
     key: https://github.com/user.keys
     validate_certs: False
 
+# Don't get confused here. In this example the "with_file" option only works as intended because there's only one key given.
+# It won't work as expected with multiple keys in "with_file". See the note to the "exclusive" option above.
 - name: Set authorized key, removing all the authorized keys already set
   authorized_key:
     user: root
